@@ -85,9 +85,6 @@ jobs:
         - store_test_results:
             path: app/build/test-results/
             destination: /test-results/
-        - run:
-          name: remove local settings
-          command: rm local.properties
 
 workflows:
   version: 2
