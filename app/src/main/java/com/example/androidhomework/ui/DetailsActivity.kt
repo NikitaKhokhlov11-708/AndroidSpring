@@ -54,4 +54,3 @@ class DetailsActivity : MvpAppCompatActivity(), DetailsView {
         startActivity(intent)
     }
 }
-
