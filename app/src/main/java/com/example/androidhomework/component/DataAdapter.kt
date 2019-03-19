@@ -28,18 +28,18 @@ class DataAdapter(private val onBookClick: (Book) -> Unit) :
     override fun getItemCount(): Int = books.size
 
     fun updateDataSet(list: ArrayList<Book>) {
-        var size = this.books.size
+        val size = this.books.size
         this.books.addAll(list)
-        var sizeNew = this.books.size
+        val sizeNew = this.books.size
         notifyItemRangeChanged(size, sizeNew)
 
     }
 
     class BooksViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val titleTextView: TextView? = itemView.findViewById(R.id.tv_book)
-        val bookImageVIew: ImageView? = itemView?.findViewById(R.id.iv_wallpaper)
-        val bookRating: TextView? = itemView?.findViewById(R.id.tv_rating)
-        val author: TextView? = itemView?.findViewById(R.id.tv_author)
+        val bookImageVIew: ImageView? = itemView.findViewById(R.id.iv_wallpaper)
+        val bookRating: TextView? = itemView.findViewById(R.id.tv_rating)
+        val author: TextView? = itemView.findViewById(R.id.tv_author)
         fun bindBooks(books: Book, onBookClick: (Book) -> Unit) {
 
             titleTextView?.text = books.best_book?.title
