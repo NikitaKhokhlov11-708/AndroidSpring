@@ -1,19 +1,25 @@
 package com.example.androidspring
 
+import android.arch.lifecycle.Observer
+import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.widget.Toast
 import com.arellomobile.mvp.MvpAppCompatActivity
 import com.arellomobile.mvp.presenter.InjectPresenter
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 class MainActivity : MvpAppCompatActivity(), MainView {
 
-    @InjectPresenter
-    lateinit var presenter: MainPresenter
+    val model = ViewModelProviders.of(this).get(MainViewModel::class.java)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        presenter.getData()
+        model.getUsers().observe(this, Observer<List<User>> {
+                Toast.makeText(this@MainActivity, "Данные обновлены", Toast.LENGTH_SHORT).show()
+        })
     }
 
     override fun showDialog() {
