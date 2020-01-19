@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AndroidSpring.iml" filepath="$PROJECT_DIR$/AndroidSpring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AndroidSpring-master.iml" filepath="$PROJECT_DIR$/AndroidSpring-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/AndroidSpring-master-app.iml" filepath="$PROJECT_DIR$/app/AndroidSpring-master-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
